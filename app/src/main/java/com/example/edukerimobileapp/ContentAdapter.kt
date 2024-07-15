@@ -16,8 +16,8 @@ val itemView=LayoutInflater.from(parent.context)
 
    override fun onBindViewHolder(holder: ContentViewHolder, position: Int) {
 val content=contentList[position]
-      holder.tvContent.text=content.image
-      holder.tvLevel.text=content.text
+      holder.tvContent.text=content.text
+      holder.tvLevel.text=content.image
    }
 
    override fun getItemCount(): Int {
@@ -25,8 +25,7 @@ return contentList.size
    }
 }
 
-
 class ContentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-   val tvLevel=itemView.findViewById<TextView>(R.id.tvLevel)
+   val tvLevel: TextView =itemView.findViewById<TextView>(R.id.tvLevel)
    val tvContent=itemView.findViewById<TextView>(R.id.tvContent)
 }
